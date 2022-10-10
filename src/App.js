@@ -13,6 +13,9 @@ function App() {
       children: [
         {
           path: '/',
+          loader: async() => {
+            return fetch('quizData.json')
+          },
           element: <Home></Home>
         },
         {
