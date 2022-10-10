@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <nav className='flex justify-between md:px-32 bg-slate-400 py-4'>
+    <nav className='flex justify-between md:px-32 bg-yellow-500 py-4'>
       <div>
         <h2 className='md:text-4xl text-2xl font-semibold text-white'>Online Quiz</h2>
       </div>
