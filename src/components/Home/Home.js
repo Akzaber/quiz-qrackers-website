@@ -4,7 +4,7 @@ import Quiz from '../Quiz/Quiz';
 
 const Home = () => {
   const quizes = useLoaderData().data;
-  console.log(quizes);
+  // console.log(quizes);
   return (
     <div>
       <div className="bg-[url('/src/quiz.jpg')] bg-no-repeat bg-cover h-[560px] mb-6 flex flex-col justify-center items-center brightness-80 min-h-screen">

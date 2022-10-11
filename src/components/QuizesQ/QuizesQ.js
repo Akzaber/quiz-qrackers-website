@@ -29,7 +29,7 @@ const QuizesQ = ({quizsQ}) => {
         theme: "colored",
       });
 
-      const showAnswer = () => toast.info( `${correctAnswer}`, {
+      const showAnswer = () => toast.info( `Answer: ${correctAnswer}`, {
         position: "bottom-center",
         autoClose: 2000,
         hideProgressBar: false,
@@ -58,10 +58,10 @@ const QuizesQ = ({quizsQ}) => {
   return (
     <div className='bg-blue-900 rounded-md w-9/12 mx-auto mb-4 p-2 text-white'>
       <div className='flex justify-between items-center'>
-        <p><strong>Question: {question}</strong></p>
+        <p><strong>Question: {question.slice(3, -4)}</strong></p>
         <button onClick={handleShow}><FontAwesomeIcon icon={faEye}></FontAwesomeIcon></button>
       </div>
-     <div className='grid grid-cols-2 mx-auto'>
+     <div className='grid md:grid-cols-2 mx-auto'>
         {
           options.map((option, index) => 
               <div key={index} className='border border-white m-2 rounded-md text-left p-5'>

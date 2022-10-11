@@ -1,13 +1,13 @@
-import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import QuizesQ from '../QuizesQ/QuizesQ';
 
 const ShowQuiz = () => {
   const showQuiz = useLoaderData().data.questions;
-  // console.log(showQuiz);
+  const quizName = useLoaderData().data.name;
+  console.log(showQuiz);
   return (
-    <div>
-      <h1 className='text-4xl font-bold'>Write Here In Detail</h1>
+    <div className='my-4'>
+      <h1 className='text-3xl font-bold text-blue-500 pb-4'>Quiz of {quizName}</h1>
       {
         showQuiz.map(quizsQ => <QuizesQ key={quizsQ.id} quizsQ={quizsQ}></QuizesQ>)
       }
