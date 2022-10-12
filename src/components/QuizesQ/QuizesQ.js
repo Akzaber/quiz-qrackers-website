@@ -56,15 +56,15 @@ const QuizesQ = ({quizsQ}) => {
 
   
   return (
-    <div className='bg-blue-900 rounded-md w-9/12 mx-auto mb-4 p-2 text-white'>
-      <div className='flex justify-between items-center'>
+    <div className='bg-yellow-400 rounded-md w-9/12 mx-auto mb-4 p-2 text-black'>
+      <div className='flex text-left justify-between items-center'>
         <p><strong>Question: {question.slice(3, -4)}</strong></p>
         <button onClick={handleShow}><FontAwesomeIcon icon={faEye}></FontAwesomeIcon></button>
       </div>
-     <div className='grid md:grid-cols-2 mx-auto'>
+     <div className='grid md:grid-cols-2 mx-auto '>
         {
           options.map((option, index) => 
-              <div key={index} className='border border-white m-2 rounded-md text-left p-5'>
+              <div key={index} className='border border-black m-2 rounded-md text-left p-5'>
               <button onClick={() => handleCorrect(option)}><input type="radio" name={id} value={option} id={option} />
               </button>
               <label htmlFor={option}>{option}</label>

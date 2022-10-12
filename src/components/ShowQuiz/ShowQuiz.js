@@ -6,8 +6,8 @@ const ShowQuiz = () => {
   const quizName = useLoaderData().data.name;
   console.log(showQuiz);
   return (
-    <div className='my-4'>
-      <h1 className='text-3xl font-bold text-blue-500 pb-4'>Quiz of {quizName}</h1>
+    <div className='py-4 bg-slate-100'>
+      <h1 className='text-3xl font-bold text-black uppercase pb-4'>Quizes of {quizName}</h1>
       {
         showQuiz.map(quizsQ => <QuizesQ key={quizsQ.id} quizsQ={quizsQ}></QuizesQ>)
       }

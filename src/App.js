@@ -13,7 +13,13 @@ function App() {
       path: '/',
       element: <Main></Main>,
       children: [
-        {path: '/', element: <Home></Home>},
+        {
+          path: '/',
+          loader: async() => {
+            return fetch('quizData.json')
+          },
+          element: <Home></Home>
+        },
         {
           path: '/home',
           loader: async() => {
@@ -47,10 +53,10 @@ function App() {
     },
     {
       path: '*',
-      element: <div className='bg-red-700 text-white h-[600px] items-center flex justify-center flex-col gap-4'>
+      element: <div className='bg-yellow-400 text-black h-[600px] items-center flex justify-center flex-col gap-4'>
         <h1 className='text-5xl font-bold'>404<br />NOT FOUND</h1>
         <p>Sorry but the page that you requested dosen't exist.</p>
-        <Link to='/'><button className='bg-green-600 font-bold py-2 px-4 rounded-md'>Back Home</button></Link>
+        <Link to='/'><button className='bg-blue-600 text-white font-bold py-2 px-4 rounded-md'>Back Home</button></Link>
       </div>
     }
   ])
