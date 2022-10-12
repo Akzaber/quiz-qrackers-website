@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blog = () => {
   return (
-    <div className='bg-yellow-200 py-6 pb-10 flex gap-4 flex-col'>
+    <div className='bg-slate-200 py-6 pb-10 flex gap-4 flex-col'>
       <div className='md:w-3/4 w-11/12 mx-auto bg-white text-left p-4 rounded drop-shadow-md'>
         <h3><strong>Question: What is the purpose of React Router?</strong></h3>
         <p><strong>Answer:</strong> The Main Purpose of the React Router is it's mainly used for developing Single Page Web Applications. React Router is used to define multiple routes in the application. React Router plays an important role to display multiple views in a single page application. Without React Router, it is not possible to display multiple views in React applications. Most of the social media websites like Facebook, Instagram uses React Router for rendering multiple views.</p>

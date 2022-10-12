@@ -5,7 +5,7 @@ import Quiz from '../Quiz/Quiz';
 const Topics = () => {
   const quizes = useLoaderData().data;
   return (
-    <div className='bg-yellow-200'>
+    <div className='bg-slate-100'>
       <h1 className='text-3xl font-bold py-6 text-black uppercase'>Let's Choose Your Topic And Explore Quiz !!!</h1>
       <div className='grid md:grid-cols-2 gap-4 pb-9'>
         {
